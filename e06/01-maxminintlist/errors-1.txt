@@ -1,0 +1,5 @@
+[ExecutionException] Exit status: 1 (non-zero), errors: "Exception in thread "main" DuplicateException
+	at OrderedIntList.add(OrderedIntList.java:114)
+	at MaxMinIntList.add(MaxMinIntList.java:15)
+	at Test.main(Test.java:13)
+"

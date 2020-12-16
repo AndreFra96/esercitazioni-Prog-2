@@ -1,0 +1,25 @@
+- Sposterei Parameter -> Memory.Location (inner class) rendendo privato il costruttore
+  togliendo così Memory dai parametri del costruttore (che può restare pubblico, o essere
+  reso privato e quindi rimbalzato su un metodo non statico di Memory)
+
+- In Parameter la traduzione tra valore e indirizzo come mai solo in read? se va anche
+  in write io fattorizzerei (in un metodo privato della classe) — peraltro forse si
+  può fare in costruzione e bon
+
+- Forse oltre alle location/parametri le istruzioni dovrebbero ricevere pure i canali di I/O
+
+- Non sono sicuro che dedurre il modo in base all'ordine in cui sono definite le costanti
+  sia cosa saggia, riga 51 di IntcodeVM (il Bloch lo critica, dice di usare valueOf o una
+  EnumMap)
+
+- Forse la enumMap potrebbe essere la strada anche per tradurre l'opcode in un instruction
+
+- Sposterei params (# parametri) dall'enum a Instruction (visto che è astratta,
+  con campo finale pubblico)
+
+- Per il riempimento della memoria farei un "ensureSize" che usi
+  lst.addAll(Collections.nCopies(index - lst.size(), 0))
+
+- Instruction.execute potrebbe restituire il PC (-1 per halt), invece di boolean
+
+- set/getMemory in IntcodeVM… forse si potrebbe iniettare un debugger/logger

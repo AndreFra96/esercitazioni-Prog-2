@@ -1,0 +1,5 @@
+Pianeta, nome: Giove, pos: (-2, 1, 1), vel: (-3, 1, 1)
+Pianeta, nome: Marte, pos: (1, -2, 3), vel: (1, -3, 3)
+Pianeta, nome: Saturno, pos: (3, 3, -2), vel: (3, 3, -3)
+Stella fissa, nome: Sole, pos: (0, 0, 0)
+Energia totale: 134
